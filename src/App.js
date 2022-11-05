@@ -1,13 +1,17 @@
-// import logo from './logo.svg';
 import './App.css';
 
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import Navbar from './components/Navbar';
+import News from './components/News';
 
 export default class App extends Component {
   name = "Akash Nad";
   render() {
     return (
-      <div>Hello I'm { this.name } & this is my first class-based component.</div>
+      <>
+        <Navbar />
+        <News />
+      </>
     );
   }
 }
