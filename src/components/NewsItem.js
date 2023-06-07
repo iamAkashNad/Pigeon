@@ -1,18 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class NewsItem extends Component {
-  myStyle = {
+const NewsItem = (props) => {
+  const myStyle = {
     margin: "auto",
     width: "100%",
     height: "100%",
     boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.2)",
   };
-  render() {
-    const { title, description, imageUrl, url, author, date, source } = this.props;
+  const { title, description, imageUrl, url, author, date, source } = props;
     const altImageUrl =
       "https://thumbs.dreamstime.com/b/golden-dove-olive-branch-holy-spirit-peace-concept-vector-illustration-golden-dove-olive-branch-holy-spirit-peace-219580021.jpg";
     return (
-      <li className="card" style={this.myStyle}>
+      <li className="card" style={myStyle}>
         <img
           src={imageUrl ? imageUrl : altImageUrl}
           style={{ height: "10rem", objectFit: "cover" }}
@@ -62,5 +61,6 @@ export default class NewsItem extends Component {
         </div>
       </li>
     );
-  }
-}
+};
+
+export default NewsItem;
